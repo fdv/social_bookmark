@@ -11,6 +11,7 @@ dest = File.join(RAILS_ROOT, '/public/images/social_bookmark/')
 
 unless File.exists? dest
   FileUtils.cd images
+  FileUtils.mkdir dest
   FileUtils.cp_r Dir.glob('*.png'), dest, :noop => true, :verbose => true  
 end
 
